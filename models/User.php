@@ -21,7 +21,16 @@ class User {
         $this->created_at = $created_at;
     }
 
-      // Getter et Setter pour le nom d'utilisateur
+    // Getter et Setter pour l'ID
+    public function getId(): ?int {
+        return $this->id;
+    }
+
+    public function setId(?int $id): void {
+        $this->id = $id;
+    }
+
+    // Getter et Setter pour le nom d'utilisateur
     public function getUsername(): string {
         return $this->username;
     }

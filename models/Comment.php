@@ -18,6 +18,15 @@ class Comment {
         $this->post = $post;
     }
 
+    // Getter et Setter pour l'ID
+    public function getId(): ?int {
+        return $this->id;
+    }
+
+    public function setId(?int $id): void {
+        $this->id = $id;
+    }
+
     // Getter et Setter pour le contenu
     public function getContent(): string {
         return $this->content;

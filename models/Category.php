@@ -14,6 +14,15 @@ class Category {
         $this->description = $description;
     }
 
+    // Getter et Setter pour l'ID
+    public function getId(): ?int {
+        return $this->id;
+    }
+
+    public function setId(?int $id): void {
+        $this->id = $id;
+    }
+
     // Getter et Setter pour le titre
     public function getTitle(): string {
         return $this->title;
