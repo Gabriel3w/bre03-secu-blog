@@ -4,13 +4,31 @@
  * @link : https://github.com/Gaellan
  */
 class Category {
-    public int $id;
+    public ?int $id = null;  // L'ID peut être null par défaut
     public string $title;
-    public ?string $description;  // La description peut être null, donc elle est de type ?string
+    public ?string $description;  // La description peut être null
 
-    public function __construct(int $id, string $title, ?string $description = null) {
-        $this->id = $id;
+    // Constructeur
+    public function __construct(string $title, ?string $description = null) {
         $this->title = $title;
+        $this->description = $description;
+    }
+
+    // Getter et Setter pour le titre
+    public function getTitle(): string {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): void {
+        $this->title = $title;
+    }
+
+    // Getter et Setter pour la description
+    public function getDescription(): ?string {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): void {
         $this->description = $description;
     }
 }
