@@ -9,11 +9,11 @@ class Post {
     public string $excerpt;
     public string $content;
     public string $author;
-    public string $created_at;
+    public DateTime $created_at;
     public User $user;  // Instance de User
     public array $categories;  // Liste des catégories liées
 
-    public function __construct(int $id, string $title, string $excerpt, string $content, string $author, string $created_at, User $user, array $categories) {
+    public function __construct(int $id, string $title, string $excerpt, string $content, string $author, DateTime $created_at, User $user, array $categories) {
         $this->id = $id;
         $this->title = $title;
         $this->excerpt = $excerpt;
